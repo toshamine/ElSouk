@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Ech Fama Lel Bi3</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+  <ion-item button *ngFor="let annonce of annonces" [routerLink]="[annonce.id]">
+    <ion-avatar slot="start">
+      <img [src]="annonce.pic" alt="Taswira Tchargi...">
+    </ion-avatar>
+  <ion-label>
+    {{annonce.title}}
+    <p> {{annonce.date}}  </p>
+  </ion-label>
+  <ion-badge slot="end"> {{annonce.price}} DT </ion-badge>
+  </ion-item>
+</ion-list>
+
+<ion-infinite-scroll (ionInfinite)="loadMore($event)">
+<ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Haw Echargi...">
+</ion-infinite-scroll-content>
+</ion-infinite-scroll>
+</ion-content>
