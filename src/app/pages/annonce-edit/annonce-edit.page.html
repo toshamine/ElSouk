@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Badel el annonce</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/annonces"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="container">
+  <form #editForm="ngForm" (ngSubmit)="edit(editForm.value)">
+
+    <label for="title">El Esm</label>
+    <input #inputTitle="ngModel" [(ngModel)]="annonce.title" required type="text" class="form-control" name="title">
+    <div *ngIf="inputTitle.invalid && inputTitle.touched" class="alert alert-danger ion-margin">Lezmek t7ot el esm !</div> 
+
+
+    <label for="title">El Soum</label>
+    <input #inputPrice="ngModel" [(ngModel)]="annonce.price"  required type="number" class="form-control" name="price">
+    <div *ngIf="inputPrice.invalid && inputPrice.touched" class="alert alert-danger ion-margin">Lezmek t7ot el soum !</div> 
+
+
+    <label for="title">El Description</label>
+    <textarea #inputDesc="ngModel" [(ngModel)]="annonce.desc" rows="4" cols="50" required class="form-control" name="desc"></textarea>
+    <div *ngIf="inputDesc.invalid && inputDesc.touched" class="alert alert-danger ion-margin">Lezmek t7ot el description !</div> 
+
+    <ion-button class="ion-margin" [disabled]="editForm.invalid" expand="block" type="submit">Emrigel</ion-button>
+
+
+  </form>
+</div>
+</ion-content>

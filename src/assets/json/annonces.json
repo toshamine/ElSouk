@@ -1,7 +1,7 @@
 [{
     "id":"1",
     "title": "BMW a vendre",
-    "price": "30.000",
+    "price": "30000",
     "date":"18/12/2022",
     "user":"Amine",
     "pic":"../assets/images/bmw.jpg",
@@ -10,7 +10,7 @@
 {
     "id":"2",
     "title": "BMW a vendre",
-    "price": "30.000",
+    "price": "30000",
     "date":"18/12/2022",
     "user":"Marwene",
     "pic":"assets/images/bmw.jpg",
@@ -19,7 +19,7 @@
 {
     "id":"3",
     "title": "BMW a vendre",
-    "price": "30.000",
+    "price": "30000",
     "date":"18/12/2022",
     "user":"Amira",
     "pic":"assets/images/bmw.jpg",
@@ -28,7 +28,7 @@
 {
     "id":"1",
     "title": "BMW a vendre",
-    "price": "30.000",
+    "price": "30000",
     "date":"18/12/2022",
     "user":"Amine",
     "pic":"../assets/images/bmw.jpg",
@@ -37,7 +37,7 @@
 {
     "id":"2",
     "title": "BMW a vendre",
-    "price": "30.000",
+    "price": "30000",
     "date":"18/12/2022",
     "user":"Marwene",
     "pic":"assets/images/bmw.jpg",
@@ -46,7 +46,7 @@
 {
     "id":"3",
     "title": "BMW a vendre",
-    "price": "30.000",
+    "price": "30000",
     "date":"18/12/2022",
     "user":"Amira",
     "pic":"assets/images/bmw.jpg",
@@ -55,7 +55,7 @@
 {
     "id":"1",
     "title": "BMW a vendre",
-    "price": "30.000",
+    "price": "30000",
     "date":"18/12/2022",
     "user":"Amine",
     "pic":"../assets/images/bmw.jpg",
@@ -64,7 +64,7 @@
 {
     "id":"2",
     "title": "BMW a vendre",
-    "price": "30.000",
+    "price": "30000",
     "date":"18/12/2022",
     "user":"Marwene",
     "pic":"assets/images/bmw.jpg",
@@ -73,7 +73,7 @@
 {
     "id":"3",
     "title": "BMW a vendre",
-    "price": "30.000",
+    "price": "30000",
     "date":"18/12/2022",
     "user":"Amira",
     "pic":"assets/images/bmw.jpg",
@@ -82,7 +82,7 @@
 {
     "id":"1",
     "title": "BMW a vendre",
-    "price": "30.000",
+    "price": "30000",
     "date":"18/12/2022",
     "user":"Amine",
     "pic":"../assets/images/bmw.jpg",
@@ -91,7 +91,7 @@
 {
     "id":"2",
     "title": "BMW a vendre",
-    "price": "30.000",
+    "price": "30000",
     "date":"18/12/2022",
     "user":"Marwene",
     "pic":"assets/images/bmw.jpg",
@@ -100,7 +100,7 @@
 {
     "id":"3",
     "title": "BMW a vendre",
-    "price": "30.000",
+    "price": "30000",
     "date":"18/12/2022",
     "user":"Amira",
     "pic":"assets/images/bmw.jpg",
@@ -109,7 +109,7 @@
 {
     "id":"1",
     "title": "BMW a vendre",
-    "price": "30.000",
+    "price": "30000",
     "date":"18/12/2022",
     "user":"Amine",
     "pic":"../assets/images/bmw.jpg",
@@ -118,7 +118,7 @@
 {
     "id":"2",
     "title": "BMW a vendre",
-    "price": "30.000",
+    "price": "30000",
     "date":"18/12/2022",
     "user":"Marwene",
     "pic":"assets/images/bmw.jpg",
@@ -127,7 +127,7 @@
 {
     "id":"3",
     "title": "BMW a vendre",
-    "price": "30.000",
+    "price": "30000",
     "date":"18/12/2022",
     "user":"Amira",
     "pic":"assets/images/bmw.jpg",

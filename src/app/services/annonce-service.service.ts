@@ -1,20 +1,42 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment.prod';
-
+import { Observable } from 'rxjs';
+import { of } from 'rxjs';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class annonceServiceService {
-  
+export class annonceServiceService{
+  private annonceList;
   private url=environment.url;
-  constructor(private http:HttpClient) { }
+  listNotifier: Subject<null> =new Subject<null>();
+  constructor(private http: HttpClient) { }
 
   getAnnonce()
   {
-    return this.http.get<any>(this.url);
+    this.http.get<any>(this.url).subscribe(res =>{
+      this.annonceList=res;
+    });
   }
+
+
+  getList()
+  {
+    return this.annonceList;
+  }
+
+  setList(list: any)
+  {
+    this.annonceList=list;
+  }
+
+  notifyList()
+  {
+    this.listNotifier.next();
+  }
+
 
  
 }

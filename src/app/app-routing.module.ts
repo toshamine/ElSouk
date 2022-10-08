@@ -7,9 +7,17 @@ const routes: Routes = [
     loadChildren: () => import('./pages/annonces/annonces.module').then( m => m.AnnoncePageModule)
   },
   {
+    path: 'annonces/:id',
+    loadChildren: () => import('./pages/annonce-details/annonce-details.module').then( m => m.AnnonceDetailsPageModule)
+  },
+  {
     path: '',
     redirectTo: 'annonces',
     pathMatch: 'full'
+  },
+  {
+    path: 'edit/:id',
+    loadChildren: () => import('./pages/annonce-edit/annonce-edit.module').then( m => m.AnnonceEditPageModule)
   },
 ];
 
