@@ -18,6 +18,9 @@ export class annonceServiceService{
   {
     this.http.get<any>(this.url).subscribe(res =>{
       this.annonceList=res;
+      this.annonceList.map((element: any)=>{
+        element.id=Math.floor(Math.random() * 100).toString();
+      });
     });
   }
 

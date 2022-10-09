@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>El Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="container">
+  <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
+
+    <label for="username">Username Emte3ek</label>
+    <input #inputUsername="ngModel" [(ngModel)]="user.username" required type="text" class="form-control" name="username">
+    <div *ngIf="inputUsername.invalid && inputUsername.touched" class="alert alert-danger ion-margin">Lezmek t7ot el username !</div> 
+
+
+    <label for="password">El Mot De Passe</label>
+    <input #inputPassword="ngModel" [(ngModel)]="user.password"  required type="password" class="form-control" name="password">
+    <div *ngIf="inputPassword.invalid && inputPassword.touched" class="alert alert-danger ion-margin">Lezmek t7ot el mot de passe !</div> 
+
+
+
+    <ion-button class="ion-margin" [disabled]="loginForm.invalid" expand="block" type="submit">Emrigel</ion-button>
+
+
+  </form>
+</div>
+</ion-content>

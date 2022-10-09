@@ -36,13 +36,16 @@ export class AnnonceEditPage implements OnInit {
     editedList.map((element: any)=>{
       if(element.id===annonce.id)
       {
+        console.log(element.id);
+        
         element.title=annonce.title;
-        element.price=annonce.price;
+        element.price=annonce.price.toString();
         element.desc=annonce.desc;
       }
     });
     this.annonceService.setList(editedList);
-    this.router.navigateByUrl('/');
+    this.annonceService.notifyList();
+    this.router.navigateByUrl('/annonces');
   }
 
   

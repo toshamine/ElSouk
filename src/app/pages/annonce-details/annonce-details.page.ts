@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { Button } from 'protractor';
 import { annonceServiceService } from 'src/app/services/annonce-service.service';
+import { authService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-annonce-details',
@@ -11,8 +12,9 @@ import { annonceServiceService } from 'src/app/services/annonce-service.service'
 })
 export class AnnonceDetailsPage implements OnInit {
   annonce: any;
+  loggedUser=this.authService.getLoggedUser();
   constructor(private route: ActivatedRoute,private annonceService: annonceServiceService,private alertCtrl: AlertController
-    ,private router: Router) { }
+    ,private router: Router,private authService: authService) { }
 
   ngOnInit() {
     const id=this.route.snapshot.paramMap.get('id');
@@ -57,7 +59,7 @@ export class AnnonceDetailsPage implements OnInit {
     });
     this.annonceService.setList(editedList);
     this.annonceService.notifyList();
-    this.router.navigateByUrl('/');
+    this.router.navigateByUrl('/annonces');
   }
 
 }
