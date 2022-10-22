@@ -33,6 +33,7 @@ export class loginPage implements OnInit {
   {
     const alert=await this.alertCtrl.create({
       header:'4alet !',
+      cssClass:'alertStyle',
       message:'Thabet fel username wel mot de passe raw fehom 7aja 4alta !',
       buttons: [
       {

@@ -7,6 +7,10 @@ import { IonicModule } from '@ionic/angular';
 import { AnnonceAddPageRoutingModule } from './annonce-add-routing.module';
 
 import { AnnonceAddPage } from './annonce-add.page';
+import { File } from '@ionic-native/file/ngx';
+import { Camera } from '@ionic-native/Camera/ngx';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 @NgModule({
   imports: [
@@ -15,6 +19,10 @@ import { AnnonceAddPage } from './annonce-add.page';
     IonicModule,
     AnnonceAddPageRoutingModule
   ],
-  declarations: [AnnonceAddPage]
+  declarations: [AnnonceAddPage],
+  providers: [StatusBar,
+    SplashScreen,
+    Camera,
+    File],
 })
 export class AnnonceAddPageModule {}

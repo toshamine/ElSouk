@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar color="danger">
     <ion-title>Badel el annonce</ion-title>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/annonces"></ion-back-button>
@@ -25,7 +25,7 @@
     <textarea #inputDesc="ngModel" [(ngModel)]="annonce.desc" rows="4" cols="50" required class="form-control" name="desc"></textarea>
     <div *ngIf="inputDesc.invalid && inputDesc.touched" class="alert alert-danger ion-margin">Lezmek t7ot el description !</div> 
 
-    <ion-button class="ion-margin" [disabled]="editForm.invalid" expand="block" type="submit">Emrigel</ion-button>
+    <ion-button class="ion-margin" [disabled]="editForm.invalid" expand="full" color="danger" type="submit">Emrigel</ion-button>
 
 
   </form>

@@ -78,6 +78,7 @@ export class AnnoncePage implements OnInit {
   async presentAlert() {
     const alert = await this.alertController.create({
       header: 'Select your favorite color',
+      cssClass:'alertStyle',
       buttons: [
         {
           text:'Emrigel',

@@ -34,6 +34,7 @@ export class AnnonceDetailsPage implements OnInit {
   {
    const alert= await this.alertCtrl.create({
     header:'Rod Belek',
+    cssClass:'alertStyle',
     message:'Mathabet t7eb tfase5 el annonce hedy ?',
     buttons:[
       {

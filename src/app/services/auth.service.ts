@@ -12,15 +12,18 @@ export class authService{
   users=[
     {
       username:'Amine',
-      password:'password'
+      password:'password',
+      tel:'2100000'
     },
     {
       username:'Marwene',
-      password:'password'
+      password:'password',
+      tel:'2100000'
     },
     {
       username:'Amira',
-      password:'password'
+      password:'password',
+      tel:'2100000'
     }
   ]
   constructor(private http: HttpClient) { }

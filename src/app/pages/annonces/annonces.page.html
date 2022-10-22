@@ -3,7 +3,7 @@
 <ion-header>
   
   
-  <ion-toolbar color="primary">
+  <ion-toolbar color="danger">
 
     <ion-title>Lel Bi3</ion-title>
 
@@ -31,7 +31,7 @@
       
       </ion-input>
     </ion-item>
-    <ion-button class="ion-margin" (click)="presentAlert()" expand="block">
+    <ion-button class="ion-margin" (click)="presentAlert()" expand="full" color="danger">
     Filtre
     </ion-button>
   </div>
@@ -44,7 +44,7 @@
     {{annonce.title}}
     <p> {{annonce.date}}  </p>
   </ion-label>
-  <ion-badge slot="end"> {{annonce.price}} DT </ion-badge>
+  <ion-badge slot="end" style="background-color:black"> {{annonce.price}} DT </ion-badge>
   </ion-item>
 </ion-list>
 

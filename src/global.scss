@@ -25,3 +25,21 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+.alertStyle {
+    .alert-head {
+        background-color: #eb445a;
+        border-radius: 0px !important;
+      }
+      .alert-button {
+        color: white;
+        border: 2px;
+        border-color: #eb445a;
+      }
+      .alert-title {
+        text-align: center;
+        font: bolder;
+      }
+    --backdrop-opacity: 0.2;
+    --color:white;
+    border-radius: 0px !important;
+}
