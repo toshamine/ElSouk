@@ -57,5 +57,16 @@ export class authService{
   {
     return this.loggedUser;
   }
+
+  registerUser(user:any)
+  {
+    this.users.push(user);
+  }
  
+  checkUsername(username:string)
+  {
+   return this.users.filter((user:any)=>{
+    return user.username==username;
+   }).length==0;
+  }
 }

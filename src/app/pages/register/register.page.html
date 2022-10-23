@@ -1,16 +1,24 @@
 <ion-header>
   <ion-toolbar color="danger">
-    <ion-title>El Login</ion-title>
+    <ion-title>9ayed Rou7ek</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/annonces" [text]="'Arja3'"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 <div class="container">
-  <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
+  <form #registerForm="ngForm" (ngSubmit)="register(registerForm.value)">
 
     <label for="username">Username Emte3ek</label>
     <input #inputUsername="ngModel" [(ngModel)]="user.username" required type="text" class="form-control" name="username">
     <div *ngIf="inputUsername.invalid && inputUsername.touched" class="alert alert-danger ion-margin">Lezmek t7ot el username !</div> 
+
+
+    <label for="tel">Telephone Emte3ek</label>
+    <input #inputTel="ngModel" [(ngModel)]="user.tel" required type="number" class="form-control" name="tel">
+    <div *ngIf="inputTel.invalid && inputTel.touched" class="alert alert-danger ion-margin">Lezmek t7ot nomrok !</div> 
 
 
     <label for="password">El Mot De Passe</label>
@@ -19,9 +27,8 @@
 
 
 
-    <ion-button class="ion-margin" color="danger" [disabled]="loginForm.invalid" expand="full" type="submit">Emrigel</ion-button>
+    <ion-button class="ion-margin" color="danger" [disabled]="registerForm.invalid" expand="full" type="submit">Emrigel</ion-button>
 
-    <ion-button class="ion-margin" color="danger" expand="full" routerLink="/register">9ayed Rou7ek</ion-button>
 
   </form>
   <ion-img [src]="'assets/icon/logo.png'"></ion-img>

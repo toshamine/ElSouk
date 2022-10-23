@@ -2,7 +2,7 @@
   <ion-toolbar color="danger">
     <ion-title> Akther Details </ion-title>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/annonces"></ion-back-button>
+      <ion-back-button defaultHref="/annonces" [text]="'Arja3'"></ion-back-button>
     </ion-buttons>
     <ion-buttons slot="end" *ngIf="loggedUser.username===annonce.user">
       <ion-button  (click)="alert()">

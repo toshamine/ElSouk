@@ -34,7 +34,7 @@ export class AnnonceAddPage implements OnInit {
     const editedList=this.annonceService.getList();
     annonce.user=this.loggedUser.username;
     annonce.price=annonce.price.toString();
-    annonce.pic='../assets/images/bmw.jpg';
+    annonce.pic='../assets/icon/logo.png';
     annonce.tel=this.loggedUser.tel;
     annonce.date=this.getSimpleDate(new Date());
     annonce.id=Math.floor(Math.random() * 100).toString();
@@ -70,21 +70,22 @@ export class AnnonceAddPage implements OnInit {
   
     async selectImage() {
       const actionSheet = await this.actionSheetController.create({
-        header: "Select Image source",
+        header: "E5tar Taswira !",
+        cssClass:'imageSelect',
         buttons: [{
-          text: 'Load from Library',
+          text: 'Taswira mel galerie',
           handler: () => {
             this.pickImage(this.camera.PictureSourceType.PHOTOLIBRARY);
           }
         },
         {
-          text: 'Use Camera',
+          text: 'Taswira bel camera',
           handler: () => {
             this.pickImage(this.camera.PictureSourceType.CAMERA);
           }
         },
         {
-          text: 'Cancel',
+          text: 'Batalet !',
           role: 'cancel'
         }
         ]

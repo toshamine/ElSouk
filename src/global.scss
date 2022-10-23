@@ -43,3 +43,32 @@
     --color:white;
     border-radius: 0px !important;
 }
+
+
+/* Note: These styles should be located in your global stylesheet */
+ion-action-sheet.imageSelect .action-sheet-group {
+  background: #eb445a;
+}
+
+ion-action-sheet.imageSelect .action-sheet-title {
+  color: #fff;
+}
+
+ion-action-sheet.imageSelect .action-sheet-cancel::after {
+  background: #eb445a;
+}
+
+ion-action-sheet.imageSelect .action-sheet-button,
+ion-action-sheet.imageSelect .action-sheet-button.ion-focused {
+  color: #000000;
+}
+
+@media (any-hover: hover) {
+  ion-action-sheet.imageSelect .action-sheet-button:hover {
+    color: #000000;
+  }
+}
+
+ion-action-sheet.imageSelect ion-backdrop {
+  opacity: 0.6;
+}

@@ -73,11 +73,19 @@ export class AnnoncePage implements OnInit {
 
   }
 
+  filterPrice(min:Number,max:Number)
+  {
+    this.annonces=this.annonceService.getList().filter((element: any)=>{
+      return (+element.price>=+min && +element.price <=+max);
+    });
+
+  }
+
 
   
   async presentAlert() {
     const alert = await this.alertController.create({
-      header: 'Select your favorite color',
+      header: 'Kifech t7eb el filtre ?',
       cssClass:'alertStyle',
       buttons: [
         {
@@ -85,6 +93,8 @@ export class AnnoncePage implements OnInit {
           handler:(alertData)=>{
             if(alertData==='mine')
             this.filter();
+            else if(alertData=='price')
+            this.presentPrice()
             else
             this.loadannonces();
           }
@@ -93,6 +103,7 @@ export class AnnoncePage implements OnInit {
       inputs: [
         {
           label: 'Les Annonces El Koul',
+          cssClass:'alertStyle',
           type: 'radio',
           value: 'all',
         },
@@ -100,6 +111,44 @@ export class AnnoncePage implements OnInit {
           label: 'Ken Les Annonces Emte3i',
           type: 'radio',
           value: 'mine',
+        },
+        {
+          label: 'Bel Soum',
+          type: 'radio',
+          value: 'price',
+        },
+      ],
+    });
+    
+    await alert.present();
+  }
+
+  async presentPrice() {
+    const alert = await this.alertController.create({
+      header: '7ot el soum bin chnowa',
+      cssClass:'alertStyle',
+      buttons: [
+        {
+          text:'Emrigel',
+          handler:(alertData)=>{
+            let max=1000000;
+            if(alertData[1])
+            max=alertData[1]
+            this.filterPrice(alertData[0] | 0,max)
+            
+          }
+        }
+      ],
+      inputs: [
+        {
+          type: 'number',
+          placeholder: 'A9al Soum',
+          min: 1,
+        },
+        {
+          type: 'number',
+          placeholder: 'Akther Soum',
+          min: 1,
         },
       ],
     });
